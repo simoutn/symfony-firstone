@@ -1,0 +1,3 @@
+weather:
+    resource: "@WeatherBundle/Resources/config/routing.xml"
+    prefix:   /

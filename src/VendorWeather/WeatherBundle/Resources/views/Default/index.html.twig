@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+{% block title %}First one test{% endblock %}
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+<link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.js') }}"></script>
+{% endblock %}
+
+{% endblock %}
+{% block body %}
+<div id="header">
+<div class="login">
+    <a href="">Login</a>
+</div>
+
+</div>
+<div id="row">
+        <div id="container">
+            <div id="welcome">
+            <form action="#" method="POST">
+                <input type="text" name="search">
+                <input type="submit" value="chercher" name="chercher">
+            </form>
+            </div>
+            
+</div>
+</div>
+
+{% endblock %}
