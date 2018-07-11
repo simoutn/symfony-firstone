@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+{% block title %}Veuillez vous connecter{% endblock %}
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+<link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.js') }}"></script>
+{% endblock %}
+
+{% endblock %}
+{% block body %}
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+   <form action="{{ path('fos_user_security_logout') }}" method="get">
+      <input type="submit" id="_submit" name="_submit" value="LogOut" style="width: 75px" class="btn btn-danger" />
+   </form>
+{% endif %}
+
+<div id="login-barre">
+    <div class="login">
+        <a href="login">Login</a>
+    </div>
+</div>
+<div id="row">
+    <div id="container">   
+        <div id="searchbar">
+                <div class="login-form">
+                                          
+<form action="#" method="post">
+   
+
+   <label for="username">Username:</label>
+    <input type="text" id="username" />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="_password" />
+
+    <button type="submit">login</button>
+    <a href="#">Mot de passe perdu</a>
+</form>
+</div></div></div>
+{% endblock %}

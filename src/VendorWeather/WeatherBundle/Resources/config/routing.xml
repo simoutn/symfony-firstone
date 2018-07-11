@@ -7,4 +7,6 @@
     <route id="weather_homepage" path="/">
         <default key="_controller">WeatherBundle:Default:index</default>
     </route>
+    
+    
 </routes>

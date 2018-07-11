@@ -13,19 +13,24 @@
 
 {% endblock %}
 {% block body %}
-<div id="header">
+<div id="login-barre">
 <div class="login">
-    <a href="">Login</a>
+    <a href="login">Login</a>
 </div>
 
 </div>
 <div id="row">
         <div id="container">
-            <div id="welcome">
-            <form action="#" method="POST">
-                <input type="text" name="search">
-                <input type="submit" value="chercher" name="chercher">
-            </form>
+            
+            <div id="searchbar">
+                
+                        <h1>Qu'aimeriez-vous chercher ?</h1>
+                <form action="" class="formulaire">
+               <input class="champ" type="text" placeholder="Chercher..."/>
+                    <input class="bouton" type="button" value=" " />
+                     
+                </form>
+                
             </div>
             
 </div>

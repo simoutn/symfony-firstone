@@ -26,11 +26,18 @@
         "symfony/assetic-bundle": "^2.8",
         "twbs/bootstrap": "^3.3",
         "components/jquery": "^3.1" ,
-        "oyejorge/less.php": "v1.7.0.14"
+        "oyejorge/less.php": "v1.7.0.14",
+        "friendsofsymfony/user-bundle": "~2.0",
+        "monolog/monolog": "^1.23",
+        "twig/extensions": "^1.5",
+        "symfony/http-foundation": "^3.4",
+        "symfony/security-bundle": "^3.4",
+        "symfony/security": "^3.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "symfony/phpunit-bridge": "^3.0",
+        "symfony/web-server-bundle": "^3.4"
     },
     "scripts": {
         "symfony-scripts": [

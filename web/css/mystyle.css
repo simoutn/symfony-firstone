@@ -1,0 +1,54 @@
+#searchbar{position:relative;  margin-top: 10%;
+    text-align: center;}
+.formulaire               {display:inline-block;}
+.formulaire .champ       {width:600px; height:35px;}
+.formulaire .bouton       { width: 35px;height: 35px;padding: 0; position: relative;}
+.bouton :before{
+    /*content: "\f002";*/
+    content: "\f002";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #000;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+#login-barre {
+    background-color: #222;
+    top: 0;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    color: #EEE;
+    font: 18px Arial, sans-serif;
+    left: 0;
+    margin: 0;
+    padding: 10px 40px 5px 0px;
+    right: 0;
+    text-align: right;
+    text-transform: none;
+    z-index: 99999;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.login-form{
+    position: relative;
+    width: 350px;
+    padding: 15px 25px 0 25px;
+    margin-top: 7%;
+    cursor: default;
+    margin-left: 41%;
+    text-align: left;
+}
+.login-form input[type=text], .login-form input[type=password], .login-form input[type=submit]
+{
+    line-height: 14px;
+    margin: 10px 0;
+    padding: 6px 15px;
+    border: 0;
+    outline: none;
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('WeatherBundle:Default:index.html.twig');
     }
+    public function loginAction()
+    {
+        return $this->render('WeatherBundle:Default:login.html.twig');
+    }
 }
