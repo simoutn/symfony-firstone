@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use VendorWeather\WeatherBundle\Entity\Region;
+use VendorWeather\WeatherBundle\Form\RegionType;
 
 class DashbordController extends Controller
 {
@@ -21,10 +22,4 @@ class DashbordController extends Controller
   'regions'=>$allregions)
   );   
 }
-public function editAction ()
-{
-    return $this->render('WeatherBundle:Dashbord:edit-region.html.twig');
-}
-
-
 }

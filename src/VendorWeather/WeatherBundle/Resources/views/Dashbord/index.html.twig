@@ -28,6 +28,7 @@
 <div class="container">
         <div class="row "> 
             <div  class="m-x-auto text-center">
+                <a class="btn btn-default" role="button" href="{{ path('weather_region_add')}}">Ajouter</a>
                 <div id="col">
                     <p>Nom</p>
                     <p>Température</p>
@@ -42,6 +43,7 @@
                             <p>{{ region.temperature }}</p>
                             <p>{{ region.commentaire }}</p>
                             <a class="btn btn-default" role="button" href="{{ path('weather_region_edit',{'id':region.id})}}">modifier</a>
+                            
                              </div>  
                             {% endfor %}
                    

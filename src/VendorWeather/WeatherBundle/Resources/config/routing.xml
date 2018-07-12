@@ -17,5 +17,8 @@
     <route id="weather_region_edit" path="/region/{id}/edit">
         <default key="_controller">WeatherBundle:Region:edit</default>
     </route>
+    <route id="weather_region_add" path="/region/add">
+        <default key="_controller">WeatherBundle:Region:add</default>
+    </route>
     
 </routes>

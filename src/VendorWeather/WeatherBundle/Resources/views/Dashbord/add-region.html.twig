@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block head %}
-{% block title %}Modification de la région {% endblock %}
+{% block title %}Ajouter région {% endblock %}
 {% block stylesheets %}
 
 <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
@@ -25,13 +25,13 @@
 
 </div>
 
-{{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+{{ form_start(add_form) }}
+        {{ form_widget(add_form) }}
     <button type="submit" class='btn btn btn-success'> <i class="fa fa-save"></i> Enregistrer</button>
     <a class="btn btn-primary" href="{{ path('weather_dashbord') }}" role="button"><i
         class="fa fa-sort-amount-asc"></i>
 Retour à la liste sans modifier</a>
 
-    {{ form_end(edit_form) }}
+    {{ form_end(add_form) }}
 
 {% endblock %}
