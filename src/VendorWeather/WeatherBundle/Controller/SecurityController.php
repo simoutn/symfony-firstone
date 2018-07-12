@@ -2,35 +2,54 @@
 
 namespace VendorWeather\WeatherBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationSuccessHandlerInterface;
 
-class SecurityController extends Controller
+/**
+ * Class AfterLoginRedirection
+ *
+ * @package AppBundle\AppListener
+ */
+class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
 {
+    private $router;
+
     /**
-     * @Route("/login", name="login")
+     * AfterLoginRedirection constructor.
+     *
+     * @param RouterInterface $router
      */
-    public function loginAction()
+    public function __construct(RouterInterface $router)
     {
-        // get the login error if there is one
-       
-       //     $error = $authenticationUtils->getLastAuthenticationError();
-
-    // last username entered by the user
-  //  $lastUsername = $authenticationUtils->getLastUsername();
-
-    return $this->render('WeatherBundle:Default:login.html.twig');
+        $this->router = $router;
     }
 
     /**
-     * @Route("/logout")
+     * @param Request        $request
+     *
+     * @param TokenInterface $token
+     *
+     * @return RedirectResponse
      */
-    public function logoutAction()
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token)
     {
-        return $this->render('WeatherBundle:Security:logout.html.twig', array(
-            // ...
-        ));
-    }
+        $roles = $token->getRoles();
 
+        $rolesTab = array_map(function ($role) {
+            return $role->getRole();
+        }, $roles);
+
+        if (in_array('ROLE_ADMIN', $rolesTab, true)) {
+            // c'est un aministrateur : on le rediriger vers l'espace admin
+            return $this->render('WeatherBundle:Security:index.html.twig');
+        } else {
+            // c'est un utilisaeur lambda : on le rediriger vers l'accueil
+            $redirection = new RedirectResponse($this->router->generate('homepage'));
+        }
+
+        return $redirection;
+    }
 }

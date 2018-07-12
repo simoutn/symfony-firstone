@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+{% block title %}First one test{% endblock %}
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+<link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.js') }}"></script>
+{% endblock %}
+
+{% endblock %}
+{% block body %}
+<div id="login-barre">
+<div class="login">
+    Bonjour {{app.user.username}}
+</div>
+
+</div>
+<div id="row">
+        <div id="container">
+            Liste des régions
+            {{region.nom}}
+            
+</div>
+</div>
+
+{% endblock %}

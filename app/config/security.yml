@@ -8,14 +8,23 @@ security:
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
     providers:
-        my_provider:
-            entity:
-                class: WeatherBundle:User
-                property : username
+        fos_userbundle:
+           id: fos_user.user_provider.username_email
     firewalls:
-        main:
-            anonymous: ~
-            form_login:
-                login_path: login
-                check_path: login
+        login:
+            pattern:   ^/(login$|register|resetting)  # Les adresses de ces pages sont login, register et resetting
+            anonymous: true                           # On autorise bien évidemment les anonymes sur ces pages !
 
+ # Firewall principal pour le reste de notre site
+        main:
+            pattern: ^/                      # ^/ = tout ce qui commence par / = tout notre site
+            form_login:                      # On définit notre méthode d'authentification
+                provider:    fos_userbundle  # On lit l'authentification au provider définit plus haut
+                remember_me: true            # On active la possibilité du "Se souvenir de moi" (désactivé par défaut)
+                login_path: /admin
+                #csrf_token_generator: security.csrf.token_manager
+                #success_handler: redirect.after.login
+                default_target_path: /admin
+               # success_handler: redirect.after.login
+            anonymous:       true            # On autorise les utilisateurs anonymes (non identifiés)
+            logout:          true  

@@ -8,5 +8,11 @@
         <default key="_controller">WeatherBundle:Default:index</default>
     </route>
     
+    <route id="weather_dashbord" path="/admin">
+        <default key="_controller">WeatherBundle:Dashbord:index</default>
+    </route>
+    <route id="weather_region" path="/admin">
+        <default key="_controller">WeatherBundle:Region:index</default>
+    </route>
     
 </routes>

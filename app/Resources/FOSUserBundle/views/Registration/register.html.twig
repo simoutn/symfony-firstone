@@ -1,0 +1,9 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+    <div class="container-fluid container-fill-height">
+        <div class="container-content-middle">
+            {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+        </div>
+    </div>
+{% endblock fos_user_content %}

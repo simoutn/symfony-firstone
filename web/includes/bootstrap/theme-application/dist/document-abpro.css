@@ -1,0 +1,75 @@
+body {
+    font-family: 'arial', sans-serif;
+    padding-top: 40px;
+    font-size: 17px;
+}
+.statut-document {
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    top: 70px;
+    left: -120px;
+    text-align: center;
+    line-height: 65px;
+    letter-spacing: 1px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+.statut-document-audit {
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 65px;
+    letter-spacing: 1px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+.titreFacture {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.titreTextLegal {
+    font-size: 14px;
+}
+.titrePanel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tvaIncraClient {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.modeReglement {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.vRef {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* borderless table */
+.table.table-borderless td, .table.table-borderless th {
+    border: 0 !important;
+}
+
+.table.table-borderless {
+    margin-bottom: 0px;
+}
+.foot{
+    position:relative;
+    bottom:0;
+}
