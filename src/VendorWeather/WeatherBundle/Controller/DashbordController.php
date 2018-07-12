@@ -16,12 +16,15 @@ class DashbordController extends Controller
     {
 //        $em = $this->getDoctrine()->getManager();
   //      $region = $this->$em()->findall();
-  $regions =$this->getDoctrine()->getRepository('WeatherBundle:Region')->findAll();
-  foreach($regions as $region)
-   {
-  $posts = $region->getNom();
-   }
-        return $this->render('WeatherBundle:Dashbord:index.html.twig');
-    }
-    
+  $allregions = $this->getDoctrine()->getRepository('WeatherBundle:Region')->findAll();
+  return $this->render('WeatherBundle:Dashbord:index.html.twig',array(
+  'regions'=>$allregions)
+  );   
+}
+public function editAction ()
+{
+    return $this->render('WeatherBundle:Dashbord:edit-region.html.twig');
+}
+
+
 }

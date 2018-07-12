@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ asset('includes/bootstrap/theme-application/docs/assets/css/toolkit.css') }}"/>
+
+    <link href="{{ asset('includes/bootstrap/theme-application/docs/assets/css/application.css') }}"
+          rel="stylesheet">
+    <link href="{{ asset('includes/bootstrap/datepicker/dist/css/bootstrap-datepicker3.min.css') }}"
+          rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/autofill/2.1.0/css/autoFill.bootstrap.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/buttons/1.1.0/css/buttons.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/fixedcolumns/3.2.0/css/fixedColumns.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/fixedheader/3.1.0/css/fixedHeader.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/keytable/2.1.0/css/keyTable.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/responsive/2.0.0/css/responsive.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/rowreorder/1.1.0/css/rowReorder.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/scroller/1.4.0/css/scroller.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/select/1.1.0/css/select.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('includes/Editor/css/editor.bootstrap.min.css') }}"/>
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="{{ asset('includes/formvalidation/dist/css/formValidation.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('includes/intl-tel-input/build/css/intlTelInput.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('includes/iCheck/skins/square/red.css') }}"/>
     </head>
     <body>
         {% block body %}{% endblock %}

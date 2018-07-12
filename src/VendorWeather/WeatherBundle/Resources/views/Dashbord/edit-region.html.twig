@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block head %}
-{% block title %}First one test{% endblock %}
+{% block title %}Modification d'une région{% endblock %}
 {% block stylesheets %}
 
 <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
@@ -41,7 +41,7 @@
                             <p>{{ region.nom }}</p>
                             <p>{{ region.temperature }}</p>
                             <p>{{ region.commentaire }}</p>
-                            <a class="btn btn-default" role="button" href="{{ path('weather_region_edit',{'id':region.id})}}">modifier</a>
+                            
                              </div>  
                             {% endfor %}
                    
